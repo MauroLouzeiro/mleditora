@@ -364,6 +364,48 @@ ul li::before { content: "•"; color: var(--dourado-acetinado); font-weight: bo
 
 .btn-enviar:hover { background-color: var(--dourado-acetinado); }
 
+.contato-container {
+    display: flex;
+    align-items: stretch; /* Isso força as colunas a terem a mesma altura */
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.contato-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o texto verticalmente para alinhar com a caixa */
+}
+
+.contato-box-wrapper {
+    flex: 1;
+    display: flex; /* Faz este container se comportar como flex para esticar a caixa interna */
+}
+
+.contato-auxiliar-box {
+    border: 1px solid #B3924E;
+    padding: 30px;
+    text-align: center;
+    width: 100%; /* Ocupa toda a largura da coluna */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(179, 146, 78, 0.02);
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho da caixa */
+}
+
+/* Responsividade para celular */
+@media (max-width: 768px) {
+    .contato-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contato-info {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
 /* --- CHAT / WHATSAPP FLUTUANTE --- */
 .whatsapp-float {
     position: fixed;
