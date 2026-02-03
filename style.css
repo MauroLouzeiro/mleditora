@@ -9,17 +9,13 @@
 /* --- GERAL --- */
 html { scroll-behavior: smooth; }
 
-/* body {
+body {
     font-family: 'Montserrat', sans-serif;
     background-color: var(--creme-editorial);
     color: var(--cinza-antracite);
     margin: 0;
     padding: 0;
     line-height: 1.8;
-} */
-
-body {
-    background-color: #c72e2e !important; /* Cor fixa em vez de var */
 }
 
 /* --- NAVBAR --- */
