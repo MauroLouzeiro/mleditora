@@ -78,6 +78,12 @@ body {
     background-color: var(--branco-puro);
     box-shadow: 0 10px 50px rgba(27, 38, 49, 0.05);
     border: 1px solid rgba(179, 146, 78, 0.1);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 section {
@@ -125,9 +131,24 @@ header::after {
 }
 
 .logo-editora {
-    max-width: 320px;
+    max-width: 200px; /* Reduzido de 320px para um visual mais sóbrio */
     height: auto;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease;
+}
+
+.logo-editora:hover {
+    transform: scale(1.02);
+}
+
+.slogan-header {
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: var(--cinza-antracite);
+    letter-spacing: 0.5px;
+    opacity: 0.9;
 }
 
 h2 {
@@ -162,12 +183,14 @@ p { text-align: justify; margin-bottom: 20px; }
     padding: 25px;
     background-color: #F9F8F5;
     border: 1px solid rgba(179, 146, 78, 0.1);
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .item-mvv:hover {
     border-color: var(--dourado-acetinado);
     background-color: var(--branco-puro);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(27, 38, 49, 0.08);
 }
 .item-mvv h3 { font-size: 0.85rem; text-align: center; }
 .item-mvv p, .item-mvv ul li { font-size: 0.8rem; line-height: 1.6; text-align: left; }
@@ -177,7 +200,21 @@ p { text-align: justify; margin-bottom: 20px; }
     padding: 40px;
 }
 
-.pilar { margin-bottom: 30px; }
+.pilar { 
+    margin-bottom: 30px; 
+    padding: 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.pilar:hover {
+    background-color: #FDFBF7;
+    border-left-color: var(--dourado-acetinado);
+    transform: translateX(10px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
 .pilar strong { color: var(--azul-meia-noite); display: block; font-size: 1.1rem; margin-bottom: 10px; }
 
 .container-tabela { 
@@ -293,11 +330,18 @@ td {
     border: 1px solid #EEE; 
     background-color: var(--branco-puro);
     position: relative; /* Essencial para o selo se ancorar aqui */
-    transition: 0.3s; 
+    transition: all 0.4s ease; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.preco-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(27, 38, 49, 0.1);
+    border-color: var(--dourado-acetinado);
+    z-index: 5;
 }
 
 /* Preço Riscado (Ancoragem) */
@@ -322,6 +366,12 @@ td {
     background-color: var(--creme-editorial); 
     transform: scale(1.05); 
     z-index: 2;
+    box-shadow: 0 10px 30px rgba(179, 146, 78, 0.15);
+}
+
+.destaque-premium:hover {
+    transform: scale(1.08) translateY(-10px);
+    box-shadow: 0 25px 50px rgba(179, 146, 78, 0.25);
 }
 
 /* Selo "Melhor Custo-Benefício" */
@@ -351,6 +401,7 @@ td {
 
 .cronograma-item { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px dashed #E0E0E0; }
 .tag { background-color: var(--azul-meia-noite); color: var(--creme-editorial); padding: 4px 12px; font-size: 0.75rem; text-transform: uppercase; margin-bottom: 15px; }
+ul { list-style: none; padding-left: 0; }
 ul li::before { content: "•"; color: var(--dourado-acetinado); font-weight: bold; width: 1.5em; display: inline-block; }
 
 .contato-container {
@@ -382,6 +433,13 @@ ul li::before { content: "•"; color: var(--dourado-acetinado); font-weight: bo
     justify-content: center;
     background-color: rgba(179, 146, 78, 0.02);
     box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.contato-auxiliar-box:hover {
+    background-color: var(--branco-puro);
+    box-shadow: 0 10px 30px rgba(179, 146, 78, 0.15);
+    transform: translateY(-5px);
 }
 
 .destaque-texto {
