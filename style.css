@@ -83,16 +83,45 @@ body {
 section {
     scroll-margin-top: 100px;
     margin-bottom: 80px;
+    position: relative;
+}
+
+section::after {
+    content: "";
+    position: absolute;
+    bottom: -40px; /* Posiciona entre as seções */
+    left: 25%;    /* Começa a 25% da largura */
+    width: 50%;   /* Tem metade da largura da página */
+    height: 1px;
+    background-color: var(--dourado-acetinado);
+    opacity: 0.3;
+}
+
+section:last-of-type::after {
+    display: none;
 }
 
 header {
     text-align: center;
-    border-bottom: 1px solid var(--dourado-acetinado);
+    border-bottom: none; /* Remove a linha antiga que ia de ponta a ponta */
     padding-bottom: 40px;
     margin-bottom: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative; /* Necessário para posicionar a linha nova */
+}
+
+/* A nova linha minimalista para o header */
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;      /* Colada na parte de baixo do padding do header */
+    left: 15%;      /* Centralizada */
+    width: 70%;     /* Metade da largura */
+    height: 1px;
+    background-color: var(--dourado-acetinado);
+    opacity: 0.5;   /* Mesma suavidade das outras seções */
 }
 
 .logo-editora {
