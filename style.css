@@ -151,11 +151,98 @@ p { text-align: justify; margin-bottom: 20px; }
 .pilar { margin-bottom: 30px; }
 .pilar strong { color: var(--azul-meia-noite); display: block; font-size: 1.1rem; margin-bottom: 10px; }
 
-.container-tabela { width: 100%; border: 1px solid rgba(179, 146, 78, 0.15); margin: 40px 0; }
+.container-tabela { 
+    width: 100%; 
+    background-color: var(--branco-puro);
+    border: 1px solid rgba(179, 146, 78, 0.15); 
+    margin: 40px 0; 
+}
 table { width: 100%; border-collapse: collapse; }
 thead { background-color: var(--azul-meia-noite); color: var(--creme-editorial); }
-th { font-family: 'Libre Baskerville', serif; padding: 25px 15px; border-bottom: 4px solid var(--dourado-acetinado); }
-td { padding: 18px 20px; border-bottom: 1px solid #F4F2EE; font-size: 0.9rem; }
+th { 
+    font-family: 'Libre Baskerville', serif; 
+    padding: 25px 15px; 
+    text-align: center;
+    border-bottom: 4px solid var(--dourado-acetinado); 
+}
+th:first-child {
+    text-align: left;
+    padding-left: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+td { 
+    padding: 15px 20px; 
+    border-bottom: 1px solid #F4F2EE; 
+    font-size: 0.9rem; 
+}
+
+.servico-nome {
+    font-weight: 400;
+    color: var(--azul-meia-noite);
+    width: 45%;
+    text-align: left;
+}
+
+.col-plan {
+    text-align: center;
+    width: 27.5%;
+}
+
+.col-premium {
+    background-color: rgba(179, 146, 78, 0.03);
+}
+
+.check-sim {
+    color: var(--dourado-acetinado);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.check-nao {
+    color: #E0E0E0;
+    font-size: 1.1rem;
+}
+
+.detalhe-tecnico {
+    display: block;
+    font-size: 0.75rem;
+    color: #888;
+    margin-top: 2px;
+    font-weight: 300;
+}
+
+.notas-rodape-tabela {
+    margin-top: 15px;
+    padding: 0 10px;
+}
+
+.notas-rodape-tabela p {
+    font-size: 0.68rem;
+    color: #888;
+    margin-bottom: 4px;
+    text-align: left;
+    font-style: italic;
+    line-height: 1.2;
+}
+
+.plano-nome { 
+    display: block; 
+    font-size: 0.75rem; 
+    color: var(--cinza-antracite); 
+    margin-bottom: 10px; 
+    letter-spacing: 1px; 
+    text-transform: uppercase;
+}
+
+.condicao { 
+    font-size: 0.7rem; 
+    color: #999; 
+    margin-top: 5px;
+}
 
 .container-precos { display: flex; justify-content: center; margin-top: 50px; gap: 30px; }
 .preco-item { flex: 1; text-align: center; padding: 30px 20px; border: 1px solid #EEE; position: relative; transition: 0.3s; }
