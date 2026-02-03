@@ -240,20 +240,30 @@
         </div>
 
         <div class="contato-form">
-            <form action="#">
+            <form action="https://formspree.io/f/mzdvoqoe" method="POST" id="contato-form">
+    
                 <div class="input-group">
                     <label>Seu Nome</label>
-                    <input type="text" placeholder="Como podemos te chamar?">
+                    <input type="text" name="nome" required placeholder="Como podemos te chamar?">
                 </div>
+
                 <div class="input-group">
                     <label>E-mail</label>
-                    <input type="email" placeholder="seuemail@exemplo.com">
+                    <input type="email" name="email" id="email-input" required placeholder="seuemail@exemplo.com">
+                    <span id="email-erro" style="color: #ff4d4d; font-size: 0.7rem; display: none; margin-top: 5px; font-weight: 600;">
+                        Formato de e-mail inválido
+                    </span>
                 </div>
+
                 <div class="input-group">
                     <label>Sua Obra</label>
-                    <textarea rows="4" placeholder="Conte brevemente sobre seu livro..."></textarea>
+                    <textarea name="mensagem" rows="4" required placeholder="Conte brevemente sobre seu livro..."></textarea>
                 </div>
-                <button type="submit" class="btn-enviar">Solicitar Consultoria</button>
+                
+                <button type="submit" class="btn-enviar" id="btn-submit">Solicitar Consultoria</button>
+                
+                <div id="status-mensagem" style="display:none;"></div>
+
             </form>
         </div>
     </div>
@@ -273,6 +283,6 @@
         </p>
     </footer>
 </div>
-
+<script src="script.js"></script>
 </body>
 </html>

@@ -405,6 +405,25 @@ ul li::before { content: "•"; color: var(--dourado-acetinado); font-weight: bo
     }
 }
 
+#status-mensagem {
+    padding: 10px;
+    border-radius: 4px;
+    background-color: rgba(179, 146, 78, 0.05);
+    border: 1px solid rgba(179, 146, 78, 0.2);
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+input-group input {
+    transition: border-color 0.3s ease;
+    outline: none; /* Remove aquela borda azul padrão dos navegadores */
+}
+
 /* --- RODAPÉ (COPYRIGHT) --- */
 footer {
     /* Força o alinhamento ao centro usando Flexbox */
