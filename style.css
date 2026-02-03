@@ -23,7 +23,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: var(--azul-meia-noite); 
+    background-color: var(--azul-meia-noite);
     border-bottom: 1px solid var(--dourado-acetinado);
     z-index: 1000;
     height: 70px;
@@ -37,7 +37,7 @@ body {
     margin: 0 auto;
     width: 100%;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     padding: 0 40px;
 }
@@ -46,7 +46,7 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--dourado-acetinado); 
+    color: var(--dourado-acetinado);
     font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -73,7 +73,7 @@ body {
 /* --- LAYOUT GERAL --- */
 .wrapper {
     max-width: 850px;
-    margin: 110px auto 60px; 
+    margin: 110px auto 60px;
     padding: 50px 60px;
     background-color: var(--branco-puro);
     box-shadow: 0 10px 50px rgba(27, 38, 49, 0.05);
@@ -140,11 +140,9 @@ p { text-align: justify; margin-bottom: 20px; }
     border-color: var(--dourado-acetinado);
     background-color: var(--branco-puro);
 }
-
 .item-mvv h3 { font-size: 0.85rem; text-align: center; }
 .item-mvv p, .item-mvv ul li { font-size: 0.8rem; line-height: 1.6; text-align: left; }
 
-/* --- MANIFESTO --- */
 .highlight-box {
     background-color: #F9F8F5;
     padding: 40px;
@@ -153,7 +151,6 @@ p { text-align: justify; margin-bottom: 20px; }
 .pilar { margin-bottom: 30px; }
 .pilar strong { color: var(--azul-meia-noite); display: block; font-size: 1.1rem; margin-bottom: 10px; }
 
-/* --- TABELA E PREÇOS --- */
 .container-tabela { width: 100%; border: 1px solid rgba(179, 146, 78, 0.15); margin: 40px 0; }
 table { width: 100%; border-collapse: collapse; }
 thead { background-color: var(--azul-meia-noite); color: var(--creme-editorial); }
@@ -165,12 +162,81 @@ td { padding: 18px 20px; border-bottom: 1px solid #F4F2EE; font-size: 0.9rem; }
 .destaque-premium { border: 2px solid var(--dourado-acetinado); background: var(--creme-editorial); transform: scale(1.05); }
 .valor { display: block; font-family: 'Libre Baskerville', serif; font-size: 2rem; color: var(--azul-meia-noite); }
 
-/* --- CRONOGRAMA --- */
+/* --- SEÇÃO DE PREÇOS CORRIGIDA --- */
+.container-precos { 
+    display: flex; 
+    justify-content: center; 
+    margin-top: 50px; 
+    gap: 30px; 
+}
+
+.preco-item { 
+    flex: 1; 
+    text-align: center; 
+    padding: 40px 20px; 
+    border: 1px solid #EEE; 
+    background-color: var(--branco-puro);
+    position: relative; /* Essencial para o selo se ancorar aqui */
+    transition: 0.3s; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Preço Riscado (Ancoragem) */
+.valor-antigo {
+    display: block;
+    font-size: 0.85rem;
+    color: #999;
+    text-decoration: line-through;
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+
+.valor { 
+    display: block; 
+    font-family: 'Libre Baskerville', serif; 
+    font-size: 2rem; 
+    color: var(--azul-meia-noite); 
+}
+
+.destaque-premium { 
+    border: 2px solid var(--dourado-acetinado); 
+    background-color: var(--creme-editorial); 
+    transform: scale(1.05); 
+    z-index: 2;
+}
+
+/* Selo "Melhor Custo-Benefício" */
+.selo-recomendado {
+    position: absolute;
+    top: -15px; /* Faz o selo ficar sobre a borda superior */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza o selo */
+    background-color: var(--dourado-acetinado);
+    color: var(--branco-puro);
+    padding: 5px 15px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Ajuste de responsividade para os preços */
+@media (max-width: 768px) {
+    .container-precos { flex-direction: column; align-items: center; }
+    .preco-item { width: 100%; box-sizing: border-box; }
+    .destaque-premium { transform: scale(1); margin-top: 20px; }
+}
+
 .cronograma-item { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px dashed #E0E0E0; }
 .tag { background-color: var(--azul-meia-noite); color: var(--creme-editorial); padding: 4px 12px; font-size: 0.75rem; text-transform: uppercase; margin-bottom: 15px; }
 ul li::before { content: "•"; color: var(--dourado-acetinado); font-weight: bold; width: 1.5em; display: inline-block; }
 
-/* --- SEÇÃO DE CONTATO (ESTRUTURA CORRIGIDA) --- */
 .contato-container {
     display: flex;
     align-items: stretch; /* Garante que a caixa dourada acompanhe a altura do texto */
@@ -215,8 +281,7 @@ ul li::before { content: "•"; color: var(--dourado-acetinado); font-weight: bo
     margin-top: 10px;
 }
 
-/* --- WHATSAPP FLUTUANTE --- */
-/* Botão WhatsApp (ajuste de posição para acomodar o Instagram) */
+
 .whatsapp-float {
     position: fixed;
     width: 60px;
@@ -236,7 +301,6 @@ ul li::before { content: "•"; color: var(--dourado-acetinado); font-weight: bo
     transition: transform 0.3s ease;
 }
 
-/* Botão Instagram */
 .instagram-float {
     position: fixed;
     width: 60px;
@@ -259,7 +323,6 @@ ul li::before { content: "•"; color: var(--dourado-acetinado); font-weight: bo
     transform: scale(1.1);
 }
 
-/* Ajuste para mobile para não cobrir muito conteúdo */
 @media screen and (max-width: 768px) {
     .whatsapp-float, .instagram-float {
         width: 50px;
@@ -269,7 +332,7 @@ ul li::before { content: "•"; color: var(--dourado-acetinado); font-weight: bo
     .whatsapp-float { bottom: 20px; }
     .instagram-float { bottom: 85px; }
 }
-/* --- FOOTER --- */
+
 footer {
     display: flex;
     flex-direction: column;
@@ -303,7 +366,6 @@ footer {
     text-transform: none;
 }
 
-/* --- RESPONSIVIDADE --- */
 @media (max-width: 768px) {
     .nav-links { display: none; }
     .grid-mvv, .contato-container { grid-template-columns: 1fr; flex-direction: column; }
