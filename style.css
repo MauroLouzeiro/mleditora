@@ -315,6 +315,22 @@ td {
 .destaque-premium { border: 2px solid var(--dourado-acetinado); background: var(--creme-editorial); transform: scale(1.05); }
 .valor { display: block; font-family: 'Libre Baskerville', serif; font-size: 2rem; color: var(--azul-meia-noite); }
 
+.tag-oportunidade {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #B3924E; /* Dourado */
+    margin: 10px 0 15px 0;
+    padding: 6px 12px;
+    border: 1px solid rgba(179, 146, 78, 0.4);
+    border-radius: 4px;
+    background-color: rgba(253, 251, 247, 0.5); 
+    display: inline-block;
+                /* Adiciona um leve tom de alerta sutil */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
 /* --- SEÇÃO DE PREÇOS CORRIGIDA --- */
 .container-precos { 
     display: flex; 
