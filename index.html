@@ -6,7 +6,18 @@
     <title>ML Editora | Solução Editorial para Autores Independentes</title>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/tables.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/pricing.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/floating-buttons.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
 </head>
 <body>
 
@@ -66,6 +77,89 @@
         <p>
             Especializados na criação, revisão e publicação de eBooks, unimos o rigor da técnica editorial à acessibilidade tecnológica. Nosso papel é garantir que o leitor foque no seu conteúdo, sem as distrações de um texto mal revisado ou de um arquivo digital com falhas de formatação.
         </p>
+    </section>
+
+    <section class="carrossel-master">
+        <button class="nav-button prev" onclick="moveSlide(-1)">&#10094;</button>
+        
+        <div class="carrossel-viewport">
+            <div class="carrossel-track" id="track">
+                
+                <div class="card-insta">
+                    <img src="logosemslogan_ml_editora_fundotranaparente.png" class="card-watermark" alt="ML Editora">
+                    <div class="tech-label-card">Excelência Técnica</div>
+                    <h3>Arquitetura <b>EPUB 3.0</b></h3>
+                    <p>Produzimos arquivos de ponta aprovados pelos mais rigorosos validadores internacionais, garantindo leitura fluida.</p>
+                    <div class="tech-specs-card">
+                        <div class="spec-item-card">✓ <span>Validação W3C</span></div>
+                        <div class="spec-item-card">✓ <span>Semântica HTML5</span></div>
+                    </div>
+                    <div class="card-footer-slogan">Solução editorial para autores independentes</div>
+                </div>
+
+                <div class="card-insta">
+                    <img src="logosemslogan_ml_editora_fundotranaparente.png" class="card-watermark" alt="ML Editora">
+                    <div class="tech-label-card">Solução Única</div>
+                    <h3>Engenharia em um <b>Único Hub</b></h3>
+                    <p>Centralizamos a complexidade: da revisão à publicação global, cuidamos de cada vírgula do seu projeto.</p>
+                    <div class="tech-specs-card">
+                        <div class="spec-item-card">✓ <span>Gestão de Projetos</span></div>
+                        <div class="spec-item-card">✓ <span>Fluxo Unificado</span></div>
+                    </div>
+                    <div class="card-footer-slogan">Solução editorial para autores independentes</div>
+                </div>
+
+                <div class="card-insta">
+                    <img src="logosemslogan_ml_editora_fundotranaparente.png" class="card-watermark" alt="ML Editora">
+                    <div class="tech-label-card">Alcance Global</div>
+                    <h3>Presença em <b>+400 Canais</b></h3>
+                    <p>Sua obra nas vitrines da Amazon, Apple, Google e bibliotecas mundiais sem qualquer burocracia técnica.</p>
+                    <div class="tech-specs-card">
+                        <div class="spec-item-card">✓ <span>Royalties Diretos</span></div>
+                        <div class="spec-item-card">✓ <span>Vendas Mundiais</span></div>
+                    </div>
+                    <div class="card-footer-slogan">Solução editorial para autores independentes</div>
+                </div>
+
+                <div class="card-insta">
+                    <img src="logosemslogan_ml_editora_fundotranaparente.png" class="card-watermark" alt="ML Editora">
+                    <div class="tech-label-card">Independência</div>
+                    <h3>Royalties e <b>Autonomia</b></h3>
+                    <p>O autor mantém 100% dos seus direitos e recebe diretamente das lojas, sem intermediários ou taxas ocultas.</p>
+                    <div class="tech-specs-card">
+                        <div class="spec-item-card">✓ <span>Controle Total</span></div>
+                        <div class="spec-item-card">✓ <span>Transparência</span></div>
+                    </div>
+                    <div class="card-footer-slogan">Solução editorial para autores independentes</div>
+                </div>
+
+                <div class="card-insta">
+                    <img src="logosemslogan_ml_editora_fundotranaparente.png" class="card-watermark" alt="ML Editora">
+                    <div class="tech-label-card">Design Fluido</div>
+                    <h3>Leitura <b>Adaptável</b></h3>
+                    <p>Design que se ajusta perfeitamente a qualquer tela, do smartphone ao e-reader de alta resolução.</p>
+                    <div class="tech-specs-card">
+                        <div class="spec-item-card">✓ <span>Layout Reflowable</span></div>
+                        <div class="spec-item-card">✓ <span>Multi-dispositivos</span></div>
+                    </div>
+                    <div class="card-footer-slogan">Solução editorial para autores independentes</div>
+                </div>
+
+                <div class="card-insta">
+                    <img src="logosemslogan_ml_editora_fundotranaparente.png" class="card-watermark" alt="ML Editora">
+                    <div class="tech-label-card">Visibilidade</div>
+                    <h3>Metadados <b>Inteligentes</b></h3>
+                    <p>Configuração avançada para que seu livro seja encontrado facilmente pelos algoritmos de busca globais.</p>
+                    <div class="tech-specs-card">
+                        <div class="spec-item-card">✓ <span>SEO Editorial</span></div>
+                        <div class="spec-item-card">✓ <span>Indexação Otimizada</span></div>
+                    </div>
+                    <div class="card-footer-slogan">Solução editorial para autores independentes</div>
+                </div>
+            </div>
+        </div>
+
+        <button class="nav-button next" onclick="moveSlide(1)">&#10095;</button>
     </section>
 
     <section id="manifesto" class="highlight-box">
@@ -193,7 +287,7 @@
             <div class="preco-item">
                 <span class="plano-nome">Investimento Standard</span>
                 <span class="valor-antigo">De R$ 2.690,90 por</span>
-                <span class="valor">R$ 1.449,90</span>
+                <span class="valor">R$ 1.440,90</span>
                 <span class="condicao">Distribuição (Amazon/Google)</span>
                 <span class="condicao">Publicação Essencial</span>
             </div>
@@ -288,5 +382,6 @@
         </p>
     </footer>
 </div>
+<script src="js/carousel.js"></script>
 </body>
 </html>

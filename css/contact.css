@@ -1,0 +1,11 @@
+.contato-container {
+    display: flex;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.contato-auxiliar-box {
+    border: 1px solid var(--dourado-acetinado);
+    padding: 30px;
+    text-align: center;
+}

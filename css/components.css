@@ -1,0 +1,45 @@
+.highlight-box {
+    background-color: #F9F8F5;
+    padding: 40px;
+}
+
+.pilar {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.pilar:hover {
+    background-color: #FDFBF7;
+    border-left-color: var(--dourado-acetinado);
+    transform: translateX(10px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.pilar strong {
+    color: var(--azul-meia-noite);
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.tag {
+    background-color: var(--azul-meia-noite);
+    color: var(--creme-editorial);
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.cronograma-item {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #E0E0E0;
+}
+
+.destaque-texto {
+    color: var(--azul-meia-noite);
+    font-weight: 600;
+    border-bottom: 1px solid rgba(179, 146, 78, 0.4);
+}

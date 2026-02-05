@@ -217,12 +217,253 @@ p { text-align: justify; margin-bottom: 20px; }
 
 .pilar strong { color: var(--azul-meia-noite); display: block; font-size: 1.1rem; margin-bottom: 10px; }
 
-.container-tabela { 
-    width: 100%; 
-    background-color: var(--branco-puro);
-    border: 1px solid rgba(179, 146, 78, 0.15); 
-    margin: 40px 0; 
+/* --- TABELA RESPONSIVA (CORREÇÃO) --- */
+
+.container-tabela {
+    width: 100%;
+    overflow-x: auto; /* Permite o deslize lateral no celular */
+    -webkit-overflow-scrolling: touch; 
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-radius: 4px;
 }
+
+.container-tabela table {
+    width: 100%;
+    min-width: 700px; /* Força a tabela a manter espaço para leitura no celular */
+    border-collapse: collapse;
+    background-color: var(--branco-puro);
+}
+
+thead { background-color: var(--azul-meia-noite); color: var(--creme-editorial); }
+
+th { 
+    font-family: 'Libre Baskerville', serif; 
+    padding: 25px 15px; 
+    text-align: center;
+    border-bottom: 4px solid var(--dourado-acetinado); 
+}
+
+th:first-child {
+    text-align: left;
+    padding-left: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+td { 
+    padding: 15px 20px; 
+    border-bottom: 1px solid #F4F2EE; 
+    font-size: 0.9rem; 
+}
+
+.servico-nome {
+    font-weight: 400;
+    color: var(--azul-meia-noite);
+    width: 40%;
+    text-align: left;
+}
+
+.col-plan {
+    text-align: center;
+    width: 30%;
+}
+
+.col-premium {
+    background-color: rgba(179, 146, 78, 0.03);
+}
+
+/* Ajuste específico para as notas de rodapé da tabela não sumirem */
+.notas-rodape-tabela {
+    margin-top: 15px;
+    padding: 0 10px;
+    clear: both;
+}
+
+/* --- FIM DA CORREÇÃO DA TABELA --- */
+/* --- CARROSSEL INFINITO ESTILO INSTAGRAM --- */
+/* --- CONTAINER PRINCIPAL --- */
+.carrossel-master {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 50px;
+}
+
+.carrossel-viewport {
+    width: 100%;
+    overflow: hidden; /* Esconde os cards fora da visão */
+}
+
+.carrossel-track {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    gap: 20px;
+}
+
+/* --- SETAS DISCRETAS --- */
+.nav-button {
+    background: none;
+    border: none;
+    color: var(--dourado-acetinado);
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    padding: 20px;
+}
+
+.nav-button:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.2);
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+
+/* --- AJUSTE NOS CARDS PARA O SITE --- */
+.card-insta {
+    flex: 0 0 320px; /* Largura fixa do card */
+    height: 420px;
+    background-color: var(--azul-meia-noite);
+    padding: 40px 30px;
+    border: 1px solid rgba(179, 146, 78, 0.3);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* (Mantenha os estilos internos do .card-insta da resposta anterior) */
+
+.carrossel-container-full {
+    width: 100%;
+    overflow: hidden;
+    padding: 60px 0;
+    background-color: var(--creme-editorial);
+    position: relative;
+}
+
+.carrossel-track {
+    display: flex;
+    width: calc(350px * 6); /* Ajuste baseado no número de cards x largura */
+    animation: scroll-infinito 25s linear infinite;
+}
+
+/* Pausa o movimento quando o usuário passa o mouse */
+.carrossel-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-infinito {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-350px * 3)); } /* Metade do número total de cards */
+}
+
+.card-insta {
+    flex: 0 0 320px;
+    height: 420px;
+    margin: 0 15px;
+    background-color: var(--azul-meia-noite);
+    padding: 40px 30px;
+    position: relative;
+    border: 1px solid rgba(179, 146, 78, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.card-insta::before {
+    content: '';
+    position: absolute;
+    top: 15px; left: 15px; right: 15px; bottom: 15px;
+    border: 1px solid var(--dourado-acetinado);
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.tech-label-card {
+    font-size: 10px;
+    color: var(--dourado-acetinado);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.tech-label-card::before {
+    content: '';
+    width: 20px;
+    height: 1px;
+    background: var(--dourado-acetinado);
+    margin-right: 10px;
+}
+
+.card-insta h3 {
+    font-family: 'Libre Baskerville', serif;
+    color: var(--creme-editorial) !important;
+    font-size: 1.5rem !important;
+    margin: 15px 0 !important;
+    line-height: 1.2 !important;
+    border: none !important;
+    padding: 0 !important;
+    text-transform: none !important;
+}
+
+.card-insta h3 b { color: var(--dourado-acetinado); }
+
+.card-insta p {
+    color: var(--creme-editorial);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    opacity: 0.8;
+    text-align: left;
+}
+
+.tech-specs-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.spec-item-card {
+    color: var(--dourado-acetinado);
+    font-size: 11px;
+    font-family: monospace;
+}
+
+.footer-card {
+    font-size: 9px;
+    color: var(--creme-editorial);
+    opacity: 0.4;
+    letter-spacing: 4px;
+    text-align: center;
+    border-top: 1px solid rgba(179, 146, 78, 0.2);
+    padding-top: 15px;
+    margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .card-insta {
+        flex: 0 0 280px;
+        height: 380px;
+    }
+}
+
 table { width: 100%; border-collapse: collapse; }
 thead { background-color: var(--azul-meia-noite); color: var(--creme-editorial); }
 th { 

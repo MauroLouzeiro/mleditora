@@ -1,0 +1,9 @@
+.whatsapp-float,
+.instagram-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    right: 40px;
+    z-index: 1000;
+}

@@ -1,0 +1,6 @@
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .grid-mvv,
+    .contato-container { flex-direction: column; }
+    .wrapper { padding: 30px 20px; }
+}

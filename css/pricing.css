@@ -1,0 +1,21 @@
+.container-precos {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.preco-item {
+    padding: 40px 20px;
+    border: 1px solid #EEE;
+    transition: 0.4s;
+}
+
+.destaque-premium {
+    border: 2px solid var(--dourado-acetinado);
+    transform: scale(1.05);
+}
+
+.valor {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2rem;
+}
