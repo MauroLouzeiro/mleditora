@@ -166,35 +166,3 @@
 
 /* --- RESPONSIVIDADE --- */
 /* --- AJUSTES PARA CELULAR --- */
-@media (max-width: 768px) {
-    .carrossel-master {
-        padding: 0; /* Remove espaços que empurram o carrossel para o lado */
-    }
-
-    .card-insta {
-        /* No mobile, o card ocupa 85% da largura da tela */
-        flex: 0 0 85vw; 
-        height: auto;
-        min-height: 400px;
-        padding: 30px 20px; /* Reduz padding interno para caber texto */
-    }
-
-    .card-insta h3 {
-        font-size: 1.5rem !important;
-    }
-
-    .tech-specs-card {
-        grid-template-columns: 1fr; /* Stack de specs no celular */
-        gap: 5px;
-    }
-
-    .nav-button {
-        /* Diminuir setas ou esconder se preferir usar o touch */
-        width: 40px;
-        height: 40px;
-        font-size: 1.5rem;
-    }
-    
-    .prev { left: 5px; }
-    .next { right: 5px; }
-}
