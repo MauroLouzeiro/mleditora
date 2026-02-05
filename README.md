@@ -2,69 +2,96 @@
 
 > **Solução Editorial para Autores Independentes.**
 
-A **ML Editora** atua como uma boutique editorial independente, especializada na arquitetura, produção e publicação de obras digitais. Este repositório contém o código-fonte da *landing page* institucional, projetada para transmitir a sobriedade, elegância e o profissionalismo que uma grande casa editorial exige.
+A **ML Editora** se posiciona como uma boutique editorial independente, focada na arquitetura, produção e publicação de obras digitais de alto padrão. Este projeto consiste na *landing page* institucional da editora, desenvolvida com uma arquitetura moderna, modular e performática para transmitir a sobriedade e elegância que a marca exige.
 
-## 🎯 Sobre o Projeto
+---
 
-O objetivo deste site é servir como vitrine de serviços e ponto de conversão para autores que buscam transformar seus manuscritos em eBooks com padrão de excelência internacional. A interface foi construída com foco na experiência do usuário (UX), guiando o autor desde a apresentação da filosofia da editora até a tabela de planos e contato.
+## 🚀 Visão Geral do Projeto
 
-## 🎨 Design e Identidade Visual
+O site foi projetado para ser uma vitrine de conversão, guiando o autor por uma jornada de descoberta que passa pelos valores da empresa, manifesto, planos de serviço e portfólio visual, culminando em canais diretos de contato.
 
-O projeto visual busca o equilíbrio entre o clássico e o moderno, utilizando uma paleta de cores que evoca confiança e sofisticação:
+### Destaques Técnicos
 
-- **Azul Meia-Noite** (`#1B2631`): Autoridade e profundidade.
-- **Dourado Acetinado** (`#B3924E`): Elegância e destaque premium.
-- **Creme Editorial** (`#FDFBF7`): Conforto de leitura (fundo).
-- **Tipografia**: 
-  - *Libre Baskerville* (Serif) para títulos, remetendo à tradição literária.
-  - *Montserrat* (Sans-serif) para o corpo de texto, garantindo legibilidade moderna.
+-   **Arquitetura CSS Modular**: O estilo foi refatorado em múltiplos módulos (`layout`, `components`, `sections`, etc.) para facilitar a manutenção e escalabilidade.
+-   **Carrossel Infinito (Vanilla JS)**: Implementação de um slider de "loop infinito" leve e responsivo, sem dependência de bibliotecas pesadas (como jQuery ou Swiper), garantindo performance máxima.
+-   **Design Responsivo & Fluido**: Layout adaptável que mantém a integridade visual desde grandes monitores até dispositivos móveis.
+-   **Micro-interações**: Animações sutis e transições suaves (`hover`, `fadeIn`) que enriquecem a experiência do usuário sem comprometer a sobriedade.
 
-## 🛠️ Tecnologias Utilizadas
+---
 
-O projeto foi desenvolvido utilizando tecnologias web modernas e leves, sem dependência de frameworks pesados, garantindo alta performance e facilidade de manutenção.
+## 🛠️ Tecnologias e Estrutura
 
-- **HTML5 Semântico**: Estrutura otimizada para SEO e acessibilidade.
-- **CSS3 Moderno**:
-  - **CSS Variables**: Para gerenciamento consistente de cores e temas.
-  - **Flexbox & Grid**: Para layouts fluidos e alinhamentos precisos.
-  - **Animações & Transições**: Micro-interações suaves (`fadeInUp`, `hover effects`) para dar vida aos elementos.
-  - **Responsividade**: Adaptação total para desktops, tablets e smartphones.
+O projeto utiliza a tríade clássica do desenvolvimento web, focando em padrões modernos e semânticos.
 
-## 📋 Funcionalidades da Página
+-   **HTML5**: Estrutura semântica e acessível.
+-   **CSS3**: Variáveis (Custom Properties), Flexbox, Grid Layout e Media Queries.
+-   **JavaScript (ES6+)**: Lógica para interatividade do carrossel e manipulação do DOM.
 
-1.  **Navegação Fixa**: Menu acessível em qualquer ponto da rolagem.
-2.  **Apresentação Institucional**: Seções de "A Editora", "Missão, Visão e Valores" e "Manifesto".
-3.  **Tabela de Planos Interativa**: Comparativo claro entre os planos Standard e Premium.
-4.  **Cronograma Visual**: Explicação didática dos prazos e etapas do processo editorial.
-5.  **CTAs de Contato**: Links diretos para WhatsApp e Instagram flutuantes.
+### Estrutura de Diretórios
 
-## 🚀 Como Executar
-
-Por ser um projeto estático, não requer instalação de dependências ou servidores complexos.
-
-1.  Clone o repositório:
-    ```bash
-    git clone https://github.com/seu-usuario/mleditora.git
-    ```
-2.  Navegue até a pasta do projeto.
-3.  Abra o arquivo `index.html` em qualquer navegador moderno (Chrome, Firefox, Edge, Safari).
-
-## 📁 Estrutura de Arquivos
+A organização dos arquivos segue o padrão de separação de responsabilidades:
 
 ```text
 mleditora/
-├── index.html      # Estrutura e conteúdo da página
-├── style.css       # Estilização, temas e animações
-├── README.md       # Documentação do projeto
-└── assets/         # (Imagens, ícones e logotipos)
+├── css/                        # Estilos modularizados
+│   ├── base.css                # Reset e variáveis globais (:root)
+│   ├── layout.css              # Estrutura macro (wrapper, containers)
+│   ├── components.css          # Botões, cards, inputs
+│   ├── sections.css            # Estilos específicos de seções
+│   ├── carousel.css            # Estilo do slider infinito
+│   ├── pricing.css             # Tabelas de preço e cards
+│   ├── responsive.css          # Ajustes finais de mobile
+│   └── ... (outros módulos)
+├── js/
+│   └── carousel.js             # Lógica do carrossel infinito
+├── assets/                     # Imagens e ícones
+├── index.html                  # Markup principal
+└── README.md                   # Documentação
 ```
 
-## 📞 Contato
+---
 
-Para dúvidas sobre publicações ou parcerias:
+## 🎨 Design System
 
-- **E-mail**: contato@mleditora.com.br
-- **Horário**: Segunda a Sexta, das 09h às 18h
+A identidade visual é o coração do projeto, evocando confiança e tradição literária com um toque contemporâneo.
+
+### Paleta de Cores
+-   **Azul Meia-Noite** (`#1B2631`): Cor primária, transmite autoridade e profundidade.
+-   **Dourado Acetinado** (`#B3924E`): Cor de destaque (accent), usada em bordas, ícones e detalhes premium.
+-   **Creme Editorial** (`#FDFBF7`): Fundo suave que simula papel pólen, reduzindo o cansaço visual.
+-   **Cinza Antracite** (`#454545`): Usado para textos corridos, oferecendo contraste ideal sem a dureza do preto puro.
+
+### Tipografia
+-   **Libre Baskerville** (Serif): Utilizada em títulos e cabeçalhos. Traz a elegância dos livros impressos.
+-   **Montserrat** (Sans-serif): Utilizada no corpo do texto e menus. Garante legibilidade e modernidade.
+
+---
+
+## � Instalação e Execução
+
+Este é um projeto estático, o que significa que não há necessidade de compilação ou configuração de servidores complexos.
+
+1.  **Clone o repositório**:
+    ```bash
+    git clone https://github.com/seu-usuario/mleditora.git
+    ```
+2.  **Acesse a pasta**:
+    ```bash
+    cd mleditora
+    ```
+3.  **Execute**:
+    -   Abra o arquivo `index.html` diretamente em seu navegador.
+    -   Ou use uma extensão como *Live Server* (VS Code) para simular um ambiente local.
+
+---
+
+## 📞 Contato e Suporte
+
+Para dúvidas sobre o desenvolvimento ou sobre os serviços da editora:
+
+-   **E-mail**: contato@mleditora.com.br
+-   **WhatsApp**: Link direto integrado no rodapé do site.
+-   **Horário**: Segunda a Sexta, das 09h às 18h.
 
 ---
 *© 2026 ML Editora. Todos os direitos reservados.*
