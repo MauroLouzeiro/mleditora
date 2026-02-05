@@ -1,21 +1,132 @@
-.container-precos {
+/* ============================================================
+   REVISÃO DOS CARDS DE PREÇOS E PLANOS (ML EDITORA)
+   ============================================================ */
+
+/* Container que envolve os cards */
+.container-precos { 
+    display: flex; 
+    justify-content: center; 
+    margin-top: 50px; 
+    gap: 30px; 
+}
+
+/* Estilo Individual de cada Card */
+.preco-item { 
+    flex: 1; 
+    text-align: center; 
+    padding: 40px 20px; 
+    border: 1px solid #EEE; 
+    background-color: var(--branco-puro);
+    position: relative; /* Para o selo se ancorar aqui */
+    transition: all 0.4s ease; 
     display: flex;
-    gap: 30px;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
-.preco-item {
-    padding: 40px 20px;
-    border: 1px solid #EEE;
-    transition: 0.4s;
+/* Efeito de Elevação ao passar o mouse */
+.preco-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(27, 38, 49, 0.1);
+    border-color: var(--dourado-acetinado);
+    z-index: 5;
 }
 
-.destaque-premium {
-    border: 2px solid var(--dourado-acetinado);
-    transform: scale(1.05);
+/* Estilos de Valores */
+.valor-antigo {
+    display: block;
+    font-size: 0.85rem;
+    color: #999;
+    text-decoration: line-through;
+    margin-bottom: 5px;
+    font-weight: 300;
 }
 
-.valor {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 2rem;
+.valor { 
+    display: block; 
+    font-family: 'Libre Baskerville', serif; 
+    font-size: 2rem; 
+    color: var(--azul-meia-noite); 
+}
+
+/* Card Destaque (Plano Premium) */
+.destaque-premium { 
+    border: 2px solid var(--dourado-acetinado); 
+    background-color: var(--creme-editorial); 
+    transform: scale(1.05); 
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(179, 146, 78, 0.15);
+}
+
+.destaque-premium:hover {
+    transform: scale(1.08) translateY(-10px);
+    box-shadow: 0 25px 50px rgba(179, 146, 78, 0.25);
+}
+
+/* Selo Flutuante "Melhor Custo-Benefício" */
+.selo-recomendado {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--dourado-acetinado);
+    color: var(--branco-puro);
+    padding: 5px 15px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Tag de Oportunidade (Slogan de Urgência) */
+.tag-oportunidade {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #B3924E;
+    margin: 10px 0 15px 0;
+    padding: 6px 12px;
+    border: 1px solid rgba(179, 146, 78, 0.4);
+    border-radius: 4px;
+    background-color: rgba(253, 251, 247, 0.5); 
+    display: inline-block;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Nome do Plano e Condição */
+.plano-nome { 
+    display: block; 
+    font-size: 0.75rem; 
+    color: var(--cinza-antracite); 
+    margin-bottom: 10px; 
+    letter-spacing: 1px; 
+    text-transform: uppercase;
+}
+
+.condicao { 
+    font-size: 0.7rem; 
+    color: #999; 
+    margin-top: 5px;
+}
+
+/* Responsividade dos Preços */
+@media (max-width: 768px) {
+    .container-precos { 
+        flex-direction: column; 
+        align-items: center; 
+        gap: 20px;
+    }
+    .preco-item { 
+        width: 100%; 
+        box-sizing: border-box; 
+    }
+    .destaque-premium { 
+        transform: scale(1); /* Remove o aumento no mobile para não bugar o layout */
+        margin-top: 10px; 
+    }
 }
