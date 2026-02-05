@@ -16,14 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Começamos no bloco do meio (original)
     let currentIndex = originalCards.length;
 
-    function getTranslateX() {
-        const cardWidth = originalCards[0].offsetWidth;
-        const containerWidth = master.offsetWidth;
-        
-        // CÁLCULO DA CENTRALIZAÇÃO:
-        // Metade da largura do container - Metade da largura do card - Posição acumulada
-        return (containerWidth / 2) - (cardWidth / 2) - (currentIndex * (cardWidth + gap));
-    }
+   function getTranslateX() {
+    // Pegamos a largura real do card e da janela no momento do clique/redimensionamento
+    const cardWidth = track.querySelector('.card-insta').offsetWidth;
+    const windowWidth = window.innerWidth;
+    
+    // O cálculo:
+    // Ponto inicial: Metade da tela
+    // Menos: Metade do card (para o centro do card bater com o centro da tela)
+    // Menos: O deslocamento de quantos cards já passaram (incluindo o gap)
+    return (windowWidth / 2) - (cardWidth / 2) - (currentIndex * (cardWidth + gap));
+}
 
     window.moveSlide = function(direction) {
         if (isTransitioning) return;
