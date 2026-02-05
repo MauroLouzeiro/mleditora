@@ -67,7 +67,7 @@ A identidade visual é o coração do projeto, evocando confiança e tradição 
 
 ---
 
-## � Instalação e Execução
+## Instalação e Execução
 
 Este é um projeto estático, o que significa que não há necessidade de compilação ou configuração de servidores complexos.
 
