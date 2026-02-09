@@ -6,7 +6,16 @@
     --branco-puro: #FFFFFF;
 }
 
-html { scroll-behavior: smooth; }
+html { 
+    scroll-behavior: smooth; 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+    background: var(--dourado-acetinado);
+    color: var(--branco-puro);
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -14,25 +23,27 @@ body {
     color: var(--cinza-antracite);
     margin: 0;
     padding: 0;
-    line-height: 1.8;
+    line-height: 1.9; /* Mais respiro */
+    overflow-x: hidden; /* Previne scroll lateral acidental */
 }
 
 h2 {
     font-family: 'Libre Baskerville', serif;
     color: var(--azul-meia-noite);
-    font-size: 1.8rem;
-    margin-bottom: 30px;
+    font-size: 2rem; /* Mais impacto */
+    margin-bottom: 35px;
     border-left: 4px solid var(--dourado-acetinado);
-    padding-left: 20px;
+    padding-left: 25px;
+    letter-spacing: -0.5px; /* Moderno */
 }
 
 h3 {
     color: var(--dourado-acetinado);
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
-    font-weight: 400;
+    letter-spacing: 2px; /* Mais elegante */
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 
 p { text-align: justify; margin-bottom: 20px; }

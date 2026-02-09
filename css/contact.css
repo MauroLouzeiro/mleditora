@@ -1,11 +1,55 @@
 .contato-container {
     display: flex;
+    align-items: stretch; /* Garante que a caixa dourada acompanhe a altura do texto */
     gap: 50px;
     margin-top: 40px;
+}
+
+.contato-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contato-box-wrapper {
+    flex: 1;
+    display: flex;
 }
 
 .contato-auxiliar-box {
     border: 1px solid var(--dourado-acetinado);
     padding: 30px;
     text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(179, 146, 78, 0.02);
+    box-sizing: border-box;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-radius: 4px;
+}
+
+.contato-auxiliar-box:hover {
+    background-color: var(--branco-puro);
+    box-shadow: 0 15px 40px rgba(179, 146, 78, 0.15);
+    transform: translateY(-5px);
+    border-color: transparent; /* Opcional: para dar foco total na sombra */
+}
+
+.nota-atendimento {
+    font-style: italic;
+    color: var(--dourado-acetinado);
+    font-size: 0.85rem;
+    margin-top: 15px;
+    display: block;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .contato-container {
+        flex-direction: column;
+        gap: 30px;
+    }
 }
