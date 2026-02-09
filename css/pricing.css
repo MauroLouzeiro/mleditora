@@ -114,19 +114,3 @@
     margin-top: 5px;
 }
 
-/* Responsividade dos Preços */
-@media (max-width: 768px) {
-    .container-precos { 
-        flex-direction: column; 
-        align-items: center; 
-        gap: 20px;
-    }
-    .preco-item { 
-        width: 100%; 
-        box-sizing: border-box; 
-    }
-    .destaque-premium { 
-        transform: scale(1); /* Remove o aumento no mobile para não bugar o layout */
-        margin-top: 10px; 
-    }
-}

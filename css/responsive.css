@@ -165,12 +165,23 @@
 
     .contato-container {
         flex-direction: column;
+        gap: 30px;
     }
     
     .contato-info {
         padding-right: 0;
         margin-bottom: 40px;
         text-align: center;
+    }
+
+    .social-links-contact {
+        flex-direction: column; /* Empilha botões no mobile */
+        align-items: flex-start;
+    }
+    
+    .social-link {
+        width: 100%; /* Botões largura total no mobile */
+        justify-content: center;
     }
 
     /* --- CARROSSEL --- */
