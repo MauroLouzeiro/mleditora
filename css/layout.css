@@ -24,6 +24,8 @@
 
 .nav-logo { display: none; }
 
+.mobile-menu-btn { display: none; }
+
 .nav-links a {
     text-decoration: none;
     color: var(--dourado-acetinado);

@@ -36,8 +36,21 @@
     border: 1px solid rgba(179, 146, 78, 0.2);
     box-sizing: border-box;
     overflow: hidden;
-    /* Opcional: manter uma transição suave */
-    transition: opacity 0.3s, transform 0.3s;
+    
+    /* Efeito de foco */
+    opacity: 0.5;
+    transform: scale(0.92);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    filter: grayscale(80%); /* Deixa os não focados meio cinza */
+}
+
+.card-insta.active {
+    opacity: 1;
+    transform: scale(1);
+    filter: grayscale(0%);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    z-index: 10;
+    border-color: #B3924E;
 }
 
 /* Moldura Interna Dourada */
