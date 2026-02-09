@@ -131,20 +131,3 @@
     color: var(--azul-meia-noite); /* Muda a cor do ícone no hover */
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .contato-container {
-        flex-direction: column;
-        gap: 30px;
-    }
-    
-    .social-links-contact {
-        flex-direction: column; /* Empilha botões no mobile */
-        align-items: flex-start;
-    }
-    
-    .social-link {
-        width: 100%; /* Botões largura total no mobile */
-        justify-content: center;
-    }
-}

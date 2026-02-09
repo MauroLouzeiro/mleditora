@@ -456,13 +456,7 @@ td {
     margin-top: 20px;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .card-insta {
-        flex: 0 0 280px;
-        height: 380px;
-    }
-}
+
 
 table { width: 100%; border-collapse: collapse; }
 thead { background-color: var(--azul-meia-noite); color: var(--creme-editorial); }
@@ -649,12 +643,7 @@ td {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Ajuste de responsividade para os preços */
-@media (max-width: 768px) {
-    .container-precos { flex-direction: column; align-items: center; }
-    .preco-item { width: 100%; box-sizing: border-box; }
-    .destaque-premium { transform: scale(1); margin-top: 20px; }
-}
+
 
 .cronograma-item { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px dashed #E0E0E0; }
 .tag { background-color: var(--azul-meia-noite); color: var(--creme-editorial); padding: 4px 12px; font-size: 0.75rem; text-transform: uppercase; margin-bottom: 15px; }
@@ -754,15 +743,7 @@ ul li::before { content: "•"; color: var(--dourado-acetinado); font-weight: bo
     transform: scale(1.1);
 }
 
-@media screen and (max-width: 768px) {
-    .whatsapp-float, .instagram-float {
-        width: 50px;
-        height: 50px;
-        right: 20px;
-    }
-    .whatsapp-float { bottom: 20px; }
-    .instagram-float { bottom: 85px; }
-}
+
 
 footer {
     display: flex;
@@ -797,11 +778,3 @@ footer {
     text-transform: none;
 }
 
-@media (max-width: 768px) {
-    .nav-links { display: none; }
-    .grid-mvv, .contato-container { grid-template-columns: 1fr; flex-direction: column; }
-    .container-precos { flex-direction: column; align-items: center; }
-    .wrapper { padding: 30px 20px; width: 90%; }
-    .destaque-premium { transform: scale(1); }
-    .contato-info { text-align: center; margin-bottom: 30px; }
-}
