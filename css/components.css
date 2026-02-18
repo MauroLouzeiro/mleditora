@@ -5,16 +5,17 @@
 
 .pilar {
     margin-bottom: 30px;
-    padding: 20px;
+    padding: 25px;
     border-left: 3px solid transparent;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Curva de animação suave */
+    border-radius: 0 8px 8px 0;
 }
 
 .pilar:hover {
-    background-color: #FDFBF7;
+    background-color: #fff; /* Destaque branco puro */
     border-left-color: var(--dourado-acetinado);
-    transform: translateX(10px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    transform: translateX(15px) scale(1.01); /* Movimento mais perceptível */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Sombra difusa ao hover */
 }
 
 .pilar strong {
